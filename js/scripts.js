@@ -7,6 +7,10 @@ function Pizza(pizzaSize, pizzaCrust, pizzaToppings, pizzaPrice) {
   this.pizzaPrice = pizzaPrice;
 }
 
+Pizza.prototype.addSize = function(newSize) {
+  this.pizzaSize = newSize;
+}
+
 
 // jQuery functions :
 

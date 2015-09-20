@@ -11,4 +11,11 @@ describe("Pizza", function() {
     expect(testPizza.pizzaPrice).to.equal("$10.00");
   });
 
+  it("adds a size to the pizza.", function() {
+    var testPizza = new Pizza(" ", " ",
+      "[' ', ' ']", "$0.00");
+    testPizza.addSize("large");
+    expect(testPizza.pizzaSize).to.equal("large");
+  });
+
 });
