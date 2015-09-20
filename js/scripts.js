@@ -113,6 +113,24 @@ Order.prototype.startOver = function() {
 var order = new Order([], 0.00);
 
 
+// Add info to confirm page :
+
+var fillConfirmPage = (function() {
+  var description = "";
+  $(".food").empty().val();
+  if (order.totalFood == "") {
+    description = "No food added.";
+    $(".food").append(description);
+  } else {
+    order.totalFood.forEach(function(foodItem) {
+      $(".food").append(foodItem + "<br>");
+    });
+  }
+  $(".price").append(order.totalPrice.toFixed(2));
+
+});
+
+
 // jQuery functions :
 
 $(document).ready(function() {
@@ -151,21 +169,25 @@ $(document).ready(function() {
 
   $(".go-to-confirm-from-choose").click(function() {
     $(".choose-page").toggle();
+    fillConfirmPage();
     $(".confirm-page").toggle();
   });
 
   $(".go-to-confirm-from-pizzas").click(function() {
     $(".pizza-page").toggle();
+    fillConfirmPage();
     $(".confirm-page").toggle();
   });
 
   $(".go-to-confirm-from-sides").click(function() {
     $(".side-page").toggle();
+    fillConfirmPage();
     $(".confirm-page").toggle();
   });
 
   $(".go-to-confirm-from-sodas").click(function() {
     $(".soda-page").toggle();
+    fillConfirmPage();
     $(".confirm-page").toggle();
   });
 
