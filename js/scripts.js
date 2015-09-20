@@ -118,8 +118,9 @@ var order = new Order([], 0.00);
 var fillConfirmPage = (function() {
   var description = "";
   $(".food").empty().val();
+  $(".price").empty().val();
   if (order.totalFood == "") {
-    description = "No food added.";
+    description = "No Food.";
     $(".food").append(description);
   } else {
     order.totalFood.forEach(function(foodItem) {
@@ -179,7 +180,15 @@ $(document).ready(function() {
     $(".confirm-page").toggle();
   });
 
-  $(".go-to-confirm-from-sides").click(function() {
+  $(".go-to-confirm-with-cheesy").click(function() {
+    order.addItem("cheesy bread");
+    $(".side-page").toggle();
+    fillConfirmPage();
+    $(".confirm-page").toggle();
+  });
+
+  $(".go-to-confirm-with-garlic").click(function() {
+    order.addItem("garlic bread");
     $(".side-page").toggle();
     fillConfirmPage();
     $(".confirm-page").toggle();
