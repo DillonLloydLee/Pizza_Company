@@ -84,6 +84,11 @@ Order.prototype.addItem = function(newItem) {
   }
 }
 
+Order.prototype.startOver = function() {
+  this.totalFood = [];
+  this.totalPrice = 0.00;
+}
+
 
 
 // jQuery functions :

@@ -107,7 +107,7 @@ describe("Order", function() {
   it("adds things to your order.", function() {
     var testOrder = new Order(['a large deep dish with 1 toppings',
       "2 liter of Coca-Cola"], 11.50);
-    testOrder.addItem("cheesy bread")
+    testOrder.addItem("cheesy bread");
     expect(testOrder.totalFood).to.eql(['a large deep dish with 1 toppings',
       "2 liter of Coca-Cola", "cheesy bread"]);
     expect(testOrder.totalPrice).to.eql(15.00);
@@ -118,10 +118,18 @@ describe("Order", function() {
       "2 liter of Coca-Cola"], 11.50);
     var testPizza = new Pizza("large", "stuffed",
       ["pepperoni"], 11.00);
-    testOrder.addItem(testPizza)
+    testOrder.addItem(testPizza);
     expect(testOrder.totalFood).to.eql(['a large deep dish with 1 toppings',
       "2 liter of Coca-Cola", "a large stuffed with 1 toppings"]);
     expect(testOrder.totalPrice).to.eql(22.50);
+  });
+
+  it("can start over.", function() {
+    var testOrder = new Order(['a large deep dish with 1 toppings',
+      "2 liter of Coca-Cola"], 11.50);
+    testOrder.startOver();
+    expect(testOrder.totalFood).to.eql([]);
+    expect(testOrder.totalPrice).to.eql(0.00);
   });
 
 });
