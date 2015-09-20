@@ -31,7 +31,7 @@
       </div>
 
 
-<!-- Order Page : -->
+<!-- Choose Page : -->
 
       <div class="choose-page">
         <h2>What Ails You Today?</h2>
@@ -73,16 +73,35 @@
         <h2>Pizza Emergency Room:</h2>
         <h2 class="no-under">Order A Pizza:</h2>
         <br>
-        <form id="pizza-data">
-            <div class="player-x">
-              <div class="form-group">
-                <p>PLAYER X:</p>
-                <input type="text" name="playerX-name" id="playerX-name" class="form-control" required autofocus placeholder="NAME">
-              </div>
-            </div>
-            <center><button type="submit">ADD THIS TO YOUR ORDER</button></center>
-        </form>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-3">
+            <h2>Size:</h2>
+            <p><span class="clickable p-small">small</span></p>
+            <p><span class="clickable p-medium">medium</span></p>
+            <p><span class="clickable p-large">large</span></p>
+          </div>
+          <div class="col-md-4">
+            <h2>Toppings:</h2>
+            <p><span class="clickable p-pepperoni">pepperoni</span></p>
+            <p><span class="clickable p-olive">black olive</span></p>
+            <p><span class="clickable p-bacon">bacon</span></p>
+            <p><span class="clickable p-onion">red onion</span></p>
+            <p><span class="clickable p-herb">rosemary herb blend</span></p>
+            <p><span class="clickable p-sausage">italian sausage</span></p>
+            <p><span class="clickable p-turkey">turkey meat</span></p>
+          </div>
+          <div class="col-md-3">
+            <h2>Crust:</h2>
+            <p><span class="clickable p-original">original</span></p>
+            <p><span class="clickable p-deep-dish">deep dish</span></p>
+            <p><span class="clickable p-stuffed">stuffed</span></p>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
 
+        <br>
+        <h3><span class="p-crust"></span></h3>
         <h3><span class="clickable go-to-confirm-from-pizzas">ADD THIS TO ORDER
           </span></h3>
         <h3><span class="clickable go-to-choose-from-pizza">DON'T ORDER A PIZZA
@@ -145,7 +164,7 @@
       </div>
 
 
-<!-- Pizza Page : -->
+<!-- Final Page : -->
 
       <div class="final-page">
         <br>
@@ -153,6 +172,14 @@
         <h3>Your order has been sent.</h3>
       </div>
 
+
+<!-- Final Page : -->
+
+      <div class="pizza-incomplete">
+        <br>
+        <h2 class="no-under">YOUR PIZZA IS INCOMPLETE!</h2>
+        <h3><span class="clickable go-to-confirm-from-pizzas">OK</span></h3>
+      </div>
 
     </div>
   </body>

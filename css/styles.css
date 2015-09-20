@@ -29,7 +29,7 @@ hr {
 }
 
 .choose-page, .pizza-page, .side-page, .soda-page, .final-page,
-.confirm-page, .about-page {
+.confirm-page, .about-page, .pizza-incomplete {
   display: none;
 }
 
@@ -47,4 +47,16 @@ hr {
   color: red;
   text-shadow: 2px 2px 5px blue;
   font-weight: 900;
+}
+
+.pizza-incomplete {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 40%;
+  border-style: double;
+  border-color: black;
+  padding: 10px;
+  background-color: white;
+  display: none;
 }
