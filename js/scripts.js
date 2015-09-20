@@ -119,69 +119,69 @@ $(document).ready(function() {
   $(".container").addClass('animated rollIn');
 
   $(".go-to-order").click(function() {
-    $(".initial-page").toggle;
-    $(".choose-page").toggle;
+    $(".initial-page").toggle();
+    $(".choose-page").toggle();
   });
 
   $(".go-to-about").click(function() {
-    $(".initial-page").toggle;
-    $(".about-page").toggle;
+    $(".initial-page").toggle();
+    $(".about-page").toggle();
   });
 
   $(".go-to-initial").click(function() {
-    $(".about-page").toggle;
-    $(".initial-page").toggle;
+    $(".about-page").toggle();
+    $(".initial-page").toggle();
   });
 
   $(".go-to-pizzas").click(function() {
-    $(".choose-page").toggle;
-    $(".pizza-page").toggle;
+    $(".choose-page").toggle();
+    $(".pizza-page").toggle();
     var thisPizza = new Pizza(" ", " ", [], 0.00);
   });
 
   $(".go-to-sides").click(function() {
-    $(".choose-page").toggle;
-    $(".side-page").toggle;
+    $(".choose-page").toggle();
+    $(".side-page").toggle();
   });
 
   $(".go-to-sodas").click(function() {
-    $(".choose-page").toggle;
-    $(".soda-page").toggle;
+    $(".choose-page").toggle();
+    $(".soda-page").toggle();
   });
 
   $(".go-to-confirm-from-pizzas").click(function() {
-    $(".pizza-page").toggle;
-    $(".confirm-page").toggle;
+    $(".pizza-page").toggle();
+    $(".confirm-page").toggle();
   });
 
   $(".go-to-confirm-from-sides").click(function() {
-    $(".side-page").toggle;
-    $(".confirm-page").toggle;
+    $(".side-page").toggle();
+    $(".confirm-page").toggle();
   });
 
   $(".go-to-confirm-from-sodas").click(function() {
-    $(".soda-page").toggle;
-    $(".confirm-page").toggle;
+    $(".soda-page").toggle();
+    $(".confirm-page").toggle();
   });
 
   $(".go-to-final").click(function() {
-    $(".confirm-page").toggle;
-    $(".final-page").toggle;
+    $(".confirm-page").toggle();
+    $(".final-page").toggle();
   });
 
   $(".go-back-to-pizzas").click(function() {
-    $(".confirm-page").toggle;
-    $(".pizza-page").toggle;
+    $(".confirm-page").toggle();
+    $(".pizza-page").toggle();
   });
 
   $(".go-back-to-sides").click(function() {
-    $(".confirm-page").toggle;
-    $(".side-page").toggle;
+    $(".confirm-page").toggle();
+    $(".side-page").toggle();
   });
 
   $(".go-back-to-sodas").click(function() {
-    $(".confirm-page").toggle;
-    $(".soda-page").toggle;
+    $(".confirm-page").toggle();
+    $(".soda-page").toggle();
   });
 
 });
