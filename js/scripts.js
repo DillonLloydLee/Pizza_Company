@@ -306,9 +306,57 @@ $(document).ready(function() {
 
 // Pizza Selectors :
 
-$(".start-over").click(function() {
-  pizza.pizzaSize = "large";
-  $(".food").append(foodItem + "<br>");
-});
+  $(".p-small").click(function() {
+    pizza.pizzaSize = "small";
+    $(".p-small").addClass("selected");
+    $(".p-medium").removeClass("selected");
+    $(".p-large").removeClass("selected");
+  });
+
+  $(".p-medium").click(function() {
+    pizza.pizzaSize = "medium";
+    $(".p-small").removeClass("selected");
+    $(".p-medium").addClass("selected");
+    $(".p-large").removeClass("selected");
+  });
+
+  $(".p-large").click(function() {
+    pizza.pizzaSize = "large";
+    $(".p-small").removeClass("selected");
+    $(".p-medium").removeClass("selected");
+    $(".p-large").addClass("selected");
+  });
+
+  $(".p-original").click(function() {
+    pizza.pizzaCrust = "original";
+    $(".p-stuffed").removeClass("selected");
+    $(".p-deep-dish").removeClass("selected");
+    $(".p-original").addClass("selected");
+  });
+
+  $(".p-stuffed").click(function() {
+    pizza.pizzaCrust = "original";
+    $(".p-stuffed").addClass("selected");
+    $(".p-deep-dish").removeClass("selected");
+    $(".p-original").removeClass("selected");
+  });
+
+  $(".p-deep-dish").click(function() {
+    pizza.pizzaCrust = "original";
+    $(".p-stuffed").removeClass("selected");
+    $(".p-deep-dish").addClass("selected");
+    $(".p-original").removeClass("selected");
+  });
+
+// p-stuffed
+// p-deep-dish
+// p-original
+// p-turkey
+// p-sausage
+// p-herb
+// p-onion
+// p-bacon
+// p-olive
+// p-pepperoni
 
 });
