@@ -1,0 +1,214 @@
+@font-face {
+  font-family: "custom";
+  src: url(CFSchoolHandwriting-Regular.ttf);
+}
+
+body {
+  font-family: 'custom';
+}
+
+h1 {
+  text-align: center;
+  font-size: 75px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 30px;
+}
+
+p {
+  text-align: center;
+  font-size: 30px;
+}
+
+.second-page {
+  display: none;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  background-color: rgba(255, 255, 192, .5);
+}
+
+.winner {
+  display: none;
+}
+
+input[type=text] {
+  border: 2px solid black;
+  font-size: 25px;
+  height: 50px;
+  text-align: center;
+  background-color: transparent;
+}
+
+label {
+  display: block;
+  appearance: button;
+  color: #111111;
+  text-align: center;
+  border: 2px solid black;
+  padding: 5px;
+}
+
+input:focus {
+  all: none;
+  background-color: rgba(255, 255, 192, .5);
+}
+
+.form-control:focus {
+  border-color: #FF0000;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 25px rgba(255, 0, 0, 0.6);
+}
+
+.blue-button {
+  border-top: 1px solid #6b6565;
+  background: #dbdcde;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1d4be3), to(#dbdcde));
+  background: -webkit-linear-gradient(top, #1d4be3, #dbdcde);
+  background: -moz-linear-gradient(top, #1d4be3, #dbdcde);
+  background: -ms-linear-gradient(top, #1d4be3, #dbdcde);
+  background: -o-linear-gradient(top, #1d4be3, #dbdcde);
+  padding: 10px 20px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.blue-button:hover {
+  border-top-color: #4c6fe0;
+  background: #4c6fe0;
+  color: #ccc;
+}
+
+.blue-button:active {
+  border-top-color: #748dde;
+  background: #748dde;
+}
+
+.purple-button {
+  border-top: 1px solid #6b6565;
+  background: #d0afe0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#a41de3), to(#d0afe0));
+  background: -webkit-linear-gradient(top, #a41de3, #d0afe0);
+  background: -moz-linear-gradient(top, #a41de3, #d0afe0);
+  background: -ms-linear-gradient(top, #a41de3, #d0afe0);
+  background: -o-linear-gradient(top, #a41de3, #d0afe0);
+  padding: 10px 20px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.purple-button:hover {
+  border-top-color: #c28ade;
+  background: #c28ade;
+  color: #cccccc;
+}
+
+.purple-button:active {
+  border-top-color: #bb56ed;
+  background: #bb56ed;
+}
+
+.green-button {
+  border-top: 1px solid #6b6565;
+  background: #b1de9b;
+  background: -webkit-gradient(linear, left top, left bottom, from(#5ce31d), to(#b1de9b));
+  background: -webkit-linear-gradient(top, #5ce31d, #b1de9b);
+  background: -moz-linear-gradient(top, #5ce31d, #b1de9b);
+  background: -ms-linear-gradient(top, #5ce31d, #b1de9b);
+  background: -o-linear-gradient(top, #5ce31d, #b1de9b);
+  padding: 10px 20px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.green-button:hover {
+  border-top-color: #8fbf76;
+  background: #8fbf76;
+  color: #cccccc;
+}
+
+.green-button:active {
+  border-top-color: #8ae65c;
+  background: #8ae65c;
+}
+
+.red-button {
+  border-top: 1px solid #6b6565;
+  background: #e6bdc6;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f00038), to(#e6bdc6));
+  background: -webkit-linear-gradient(top, #f00038, #e6bdc6);
+  background: -moz-linear-gradient(top, #f00038, #e6bdc6);
+  background: -ms-linear-gradient(top, #f00038, #e6bdc6);
+  background: -o-linear-gradient(top, #f00038, #e6bdc6);
+  padding: 10px 20px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.red-button:hover {
+  border-top-color: #e6597c;
+  background: #e6597c;
+  color: #ccc;
+}
+
+.red-button:active {
+  border-top-color: #c7002e;h
+  background: #c7002e;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 30px;
+}
+
+.gridRow {
+  clear: both;
+}
+
+.square-one, .square-two, .square-three, .square-four, .square-five, .square-six, .square-seven, .square-eight, .square-nine {
+  width: 100px;
+  height: 100px;
+  border:3px solid black;
+  float: left;
+  line-height: 100px;
+  font-size: 50px;
+}
+
+.gameboard {
+  width: 60%;
+}
