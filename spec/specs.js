@@ -81,4 +81,12 @@ describe("Pizza", function() {
     expect(testPizza.pizzaPrice).to.eql(9.00);
   });
 
+  it("can change sizes.", function() {
+    var testPizza = new Pizza("large", "stuffed",
+      ["pepperoni"], 11.00);
+    testPizza.addSize("small");
+    expect(testPizza.pizzaSize).to.eql("small");
+    expect(testPizza.pizzaPrice).to.eql(8.00);
+  });
+
 });

@@ -8,6 +8,13 @@ function Pizza(pizzaSize, pizzaCrust, pizzaToppings, pizzaPrice) {
 }
 
 Pizza.prototype.addSize = function(newSize) {
+  if (this.pizzaSize == "small") {
+    this.pizzaPrice -= 5.00;
+  } else if (this.pizzaSize == "medium") {
+    this.pizzaPrice -= 6.50;
+  } else if (this.pizzaSize == "large") {
+    this.pizzaPrice -= 8.00;
+  }
   this.pizzaSize = newSize;
   if (this.pizzaSize == "small") {
     this.pizzaPrice += 5.00;
