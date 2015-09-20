@@ -76,19 +76,19 @@ function Order(totalFood, totalPrice) {
 // Order prototype, adding an item :
 
 Order.prototype.addItem = function(newItem) {
-  if (newItem == "2 liter of Coca-Cola") {
+  if (newItem == "a 2 liter of Coca-Cola") {
     this.totalFood.push(newItem);
     this.totalPrice += 1.50;
-  } else if (newItem == "2 liter of Sprite") {
+  } else if (newItem == "a 2 liter of Sprite") {
     this.totalFood.push(newItem);
     this.totalPrice += 1.50;
-  } else if (newItem == "2 liter of Diet Coke") {
+  } else if (newItem == "a 2 liter of Diet Coke") {
     this.totalFood.push(newItem);
     this.totalPrice += 1.50;
-  } else if (newItem == "cheesy bread") {
+  } else if (newItem == "an order of cheesy bread") {
     this.totalFood.push(newItem);
     this.totalPrice += 3.50;
-  } else if (newItem == "garlic bread") {
+  } else if (newItem == "an order of garlic bread") {
     this.totalFood.push(newItem);
     this.totalPrice += 2.50;
   } else {
@@ -181,20 +181,35 @@ $(document).ready(function() {
   });
 
   $(".go-to-confirm-with-cheesy").click(function() {
-    order.addItem("cheesy bread");
+    order.addItem("an order of cheesy bread");
     $(".side-page").toggle();
     fillConfirmPage();
     $(".confirm-page").toggle();
   });
 
   $(".go-to-confirm-with-garlic").click(function() {
-    order.addItem("garlic bread");
+    order.addItem("an order of garlic bread");
     $(".side-page").toggle();
     fillConfirmPage();
     $(".confirm-page").toggle();
   });
 
-  $(".go-to-confirm-from-sodas").click(function() {
+  $(".go-to-confirm-with-coke").click(function() {
+    order.addItem("a 2 liter of Coca-Cola");
+    $(".soda-page").toggle();
+    fillConfirmPage();
+    $(".confirm-page").toggle();
+  });
+
+  $(".go-to-confirm-with-diet").click(function() {
+    order.addItem("a 2 liter of Diet Coke");
+    $(".soda-page").toggle();
+    fillConfirmPage();
+    $(".confirm-page").toggle();
+  });
+
+  $(".go-to-confirm-with-sprite").click(function() {
+    order.addItem("a 2 liter of Sprite");
     $(".soda-page").toggle();
     fillConfirmPage();
     $(".confirm-page").toggle();
