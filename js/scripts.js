@@ -139,44 +139,60 @@ $(document).ready(function() {
 
   $(".go-to-order").click(function() {
     $(".initial-page").toggle();
+    $(".choose-page").removeClass('animated fadeInUp');
+    $(".choose-page").addClass('animated fadeInUp');
     $(".choose-page").toggle();
   });
 
   $(".go-to-about").click(function() {
     $(".initial-page").toggle();
+    $(".about-page").removeClass('animated fadeInUp');
+    $(".about-page").addClass('animated fadeInUp');
     $(".about-page").toggle();
   });
 
   $(".go-to-initial").click(function() {
     $(".about-page").toggle();
+    $(".initial-page").removeClass('animated fadeInUp');
+    $(".initial-page").addClass('animated fadeInUp');
     $(".initial-page").toggle();
   });
 
   $(".go-to-pizzas").click(function() {
     $(".choose-page").toggle();
+    $(".pizza-page").removeClass('animated fadeInUp');
+    $(".pizza-page").addClass('animated fadeInUp');
     $(".pizza-page").toggle();
     var thisPizza = new Pizza(" ", " ", [], 0.00);
   });
 
   $(".go-to-sides").click(function() {
     $(".choose-page").toggle();
+    $(".side-page").removeClass('animated fadeInUp');
+    $(".side-page").addClass('animated fadeInUp');
     $(".side-page").toggle();
   });
 
   $(".go-to-sodas").click(function() {
     $(".choose-page").toggle();
+    $(".soda-page").removeClass('animated fadeInUp');
+    $(".soda-page").addClass('animated fadeInUp');
     $(".soda-page").toggle();
   });
 
   $(".go-to-confirm-from-choose").click(function() {
     $(".choose-page").toggle();
     fillConfirmPage();
+    $(".confirm-page").removeClass('animated fadeInUp');
+    $(".confirm-page").addClass('animated fadeInUp');
     $(".confirm-page").toggle();
   });
 
   $(".go-to-confirm-from-pizzas").click(function() {
     $(".pizza-page").toggle();
     fillConfirmPage();
+    $(".confirm-page").removeClass('animated fadeInUp');
+    $(".confirm-page").addClass('animated fadeInUp');
     $(".confirm-page").toggle();
   });
 
@@ -184,6 +200,8 @@ $(document).ready(function() {
     order.addItem("an order of cheesy bread");
     $(".side-page").toggle();
     fillConfirmPage();
+    $(".confirm-page").removeClass('animated fadeInUp');
+    $(".confirm-page").addClass('animated fadeInUp');
     $(".confirm-page").toggle();
   });
 
@@ -191,6 +209,8 @@ $(document).ready(function() {
     order.addItem("an order of garlic bread");
     $(".side-page").toggle();
     fillConfirmPage();
+    $(".confirm-page").removeClass('animated fadeInUp');
+    $(".confirm-page").addClass('animated fadeInUp');
     $(".confirm-page").toggle();
   });
 
@@ -198,6 +218,8 @@ $(document).ready(function() {
     order.addItem("a 2 liter of Coca-Cola");
     $(".soda-page").toggle();
     fillConfirmPage();
+    $(".confirm-page").removeClass('animated fadeInUp');
+    $(".confirm-page").addClass('animated fadeInUp');
     $(".confirm-page").toggle();
   });
 
@@ -205,6 +227,8 @@ $(document).ready(function() {
     order.addItem("a 2 liter of Diet Coke");
     $(".soda-page").toggle();
     fillConfirmPage();
+    $(".confirm-page").removeClass('animated fadeInUp');
+    $(".confirm-page").addClass('animated fadeInUp');
     $(".confirm-page").toggle();
   });
 
@@ -212,42 +236,65 @@ $(document).ready(function() {
     order.addItem("a 2 liter of Sprite");
     $(".soda-page").toggle();
     fillConfirmPage();
+    $(".confirm-page").removeClass('animated fadeInUp');
+    $(".confirm-page").addClass('animated fadeInUp');
     $(".confirm-page").toggle();
   });
 
   $(".go-to-choose-from-sodas").click(function() {
     $(".soda-page").toggle();
+    $(".choose-page").removeClass('animated fadeInUp');
+    $(".choose-page").addClass('animated fadeInUp');
     $(".choose-page").toggle();
   });
 
   $(".go-to-choose-from-sides").click(function() {
     $(".side-page").toggle();
+    $(".choose-page").removeClass('animated fadeInUp');
+    $(".choose-page").addClass('animated fadeInUp');
+    $(".choose-page").toggle();
+  });
+
+  $(".go-to-choose-from-pizza").click(function() {
+    $(".pizza-page").toggle();
+    $(".choose-page").removeClass('animated fadeInUp');
+    $(".choose-page").addClass('animated fadeInUp');
     $(".choose-page").toggle();
   });
 
   $(".go-to-final").click(function() {
     $(".confirm-page").toggle();
+    $(".final-page").removeClass('animated fadeInUp');
+    $(".final-page").addClass('animated fadeInUp');
     $(".final-page").toggle();
   });
 
   $(".go-back-to-pizzas").click(function() {
     $(".confirm-page").toggle();
+    $(".pizza-page").removeClass('animated fadeInUp');
+    $(".pizza-page").addClass('animated fadeInUp');
     $(".pizza-page").toggle();
   });
 
   $(".go-back-to-sides").click(function() {
     $(".confirm-page").toggle();
+    $(".side-page").removeClass('animated fadeInUp');
+    $(".side-page").addClass('animated fadeInUp');
     $(".side-page").toggle();
   });
 
   $(".go-back-to-sodas").click(function() {
     $(".confirm-page").toggle();
+    $(".soda-page").removeClass('animated fadeInUp');
+    $(".soda-page").addClass('animated fadeInUp');
     $(".soda-page").toggle();
   });
 
   $(".start-over").click(function() {
     order.startOver();
     $(".confirm-page").toggle();
+    $(".choose-page").removeClass('animated fadeInUp');
+    $(".choose-page").addClass('animated fadeInUp');
     $(".choose-page").toggle();
   });
 

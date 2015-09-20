@@ -9,7 +9,7 @@ began: 09/19/2015
 
 ### Description:
 
-It's a pizza ordering website that utilizes jQuery and HTML coding.
+It's a pizza ordering website that utilizes jQuery and HTML coding.  Clicking each button hides the current set of HTML while revealing another set on the same page.  There are prototypes set up for Pizza and Order, which change each time you add something.  Loading up the 'confirm page' appends data from your order onto the HTML so that it is different each time depending on what your order is.
 
 
 ### Setup:
