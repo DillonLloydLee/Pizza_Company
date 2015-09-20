@@ -4,11 +4,11 @@ describe("Pizza", function() {
 
   it("creates a pizza with the specified properties.", function() {
     var testPizza = new Pizza("large", "deep dish",
-      "['pepperoni', 'black olives']", 10.00);
+      "['pepperoni', 'black olives']", 11.00);
     expect(testPizza.pizzaSize).to.equal("large");
     expect(testPizza.pizzaCrust).to.equal("deep dish");
     expect(testPizza.pizzaToppings).to.equal("['pepperoni', 'black olives']");
-    expect(testPizza.pizzaPrice).to.equal(10.00);
+    expect(testPizza.pizzaPrice).to.equal(11.00);
   });
 
   it("adds a size to the pizza.", function() {
@@ -39,6 +39,30 @@ describe("Pizza", function() {
     testPizza.addCrust("deep dish");
     expect(testPizza.pizzaCrust).to.equal("deep dish");
     expect(testPizza.pizzaPrice).to.equal(9.00);
+  });
+
+  it("adds toppings to the pizza.", function() {
+    var testPizza = new Pizza("large", "stuffed",
+      "[' ', ' ']", 10.00);
+    testPizza.addTopping("pepperoni");
+    expect(testPizza.pizzaToppings).to.equal("['pepperoni']");
+  });
+
+  it("changes price when you add a crust.", function() {
+    var testPizza = new Pizza("large", "stuffed",
+      "[' ', ' ']", 10.00);
+    testPizza.addTopping("pepperoni");
+    expect(testPizza.pizzaToppings).to.equal("['pepperoni']");
+    expect(testPizza.pizzaPrice).to.equal(11.00);
+  });
+
+  it("changes price when you add a crust.", function() {
+    var testPizza = new Pizza("large", "stuffed",
+      "[' ', ' ']", 10.00);
+    testPizza.addTopping("pepperoni");
+    testPizza.addTopping("black olives");
+    expect(testPizza.pizzaToppings).to.equal("['pepperoni', 'black olives']");
+    expect(testPizza.pizzaPrice).to.equal(12.00);
   });
 
 });
