@@ -108,6 +108,13 @@ Order.prototype.startOver = function() {
 }
 
 
+// function for determining if something is in an array :
+
+var isInArray = (function(value, array) {
+  return array.indexOf(value) > -1;
+});
+
+
 // Starting an initial order :
 
 var order = new Order([], 0.00);
@@ -307,56 +314,115 @@ $(document).ready(function() {
 // Pizza Selectors :
 
   $(".p-small").click(function() {
-    pizza.pizzaSize = "small";
+    pizza.addSize("small");
     $(".p-small").addClass("selected");
     $(".p-medium").removeClass("selected");
     $(".p-large").removeClass("selected");
   });
 
   $(".p-medium").click(function() {
-    pizza.pizzaSize = "medium";
+    pizza.addSize("medium");
     $(".p-small").removeClass("selected");
     $(".p-medium").addClass("selected");
     $(".p-large").removeClass("selected");
   });
 
   $(".p-large").click(function() {
-    pizza.pizzaSize = "large";
+    pizza.addSize("large");
     $(".p-small").removeClass("selected");
     $(".p-medium").removeClass("selected");
     $(".p-large").addClass("selected");
   });
 
   $(".p-original").click(function() {
-    pizza.pizzaCrust = "original";
+    pizza.addCrust("original");
     $(".p-stuffed").removeClass("selected");
     $(".p-deep-dish").removeClass("selected");
     $(".p-original").addClass("selected");
   });
 
   $(".p-stuffed").click(function() {
-    pizza.pizzaCrust = "original";
+    pizza.addCrust("stuffed");
     $(".p-stuffed").addClass("selected");
     $(".p-deep-dish").removeClass("selected");
     $(".p-original").removeClass("selected");
   });
 
   $(".p-deep-dish").click(function() {
-    pizza.pizzaCrust = "original";
+    pizza.addCrust("deep dish");
     $(".p-stuffed").removeClass("selected");
     $(".p-deep-dish").addClass("selected");
     $(".p-original").removeClass("selected");
   });
 
-// p-stuffed
-// p-deep-dish
-// p-original
-// p-turkey
-// p-sausage
-// p-herb
-// p-onion
-// p-bacon
-// p-olive
-// p-pepperoni
+  $(".p-turkey").click(function() {
+    if (isInArray("turkey", pizza.pizzaToppings)){
+      pizza.removeTopping("turkey");
+      $(".p-turkey").removeClass("selected");
+    } else {
+      pizza.addTopping("turkey");
+      $(".p-turkey").addClass("selected");
+    }
+  });
+
+  $(".p-sausage").click(function() {
+    if (isInArray("sausage", pizza.pizzaToppings)){
+      pizza.removeTopping("sausage");
+      $(".p-sausage").removeClass("selected");
+    } else {
+      pizza.addTopping("sausage");
+      $(".p-sausage").addClass("selected");
+    }
+  });
+
+  $(".p-herb").click(function() {
+    if (isInArray("herb", pizza.pizzaToppings)){
+      pizza.removeTopping("herb");
+      $(".p-herb").removeClass("selected");
+    } else {
+      pizza.addTopping("herb");
+      $(".p-herb").addClass("selected");
+    }
+  });
+
+  $(".p-onion").click(function() {
+    if (isInArray("onion", pizza.pizzaToppings)){
+      pizza.removeTopping("onion");
+      $(".p-onion").removeClass("selected");
+    } else {
+      pizza.addTopping("onion");
+      $(".p-onion").addClass("selected");
+    }
+  });
+
+  $(".p-bacon").click(function() {
+    if (isInArray("bacon", pizza.pizzaToppings)){
+      pizza.removeTopping("bacon");
+      $(".p-bacon").removeClass("selected");
+    } else {
+      pizza.addTopping("bacon");
+      $(".p-bacon").addClass("selected");
+    }
+  });
+
+  $(".p-olive").click(function() {
+    if (isInArray("olive", pizza.pizzaToppings)){
+      pizza.removeTopping("olive");
+      $(".p-olive").removeClass("selected");
+    } else {
+      pizza.addTopping("olive");
+      $(".p-olive").addClass("selected");
+    }
+  });
+
+  $(".p-pepperoni").click(function() {
+    if (isInArray("pepperoni", pizza.pizzaToppings)){
+      pizza.removeTopping("pepperoni");
+      $(".p-pepperoni").removeClass("selected");
+    } else {
+      pizza.addTopping("pepperoni");
+      $(".p-pepperoni").addClass("selected");
+    }
+  });
 
 });
