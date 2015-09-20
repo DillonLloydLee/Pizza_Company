@@ -35,7 +35,7 @@ describe("Pizza", function() {
 
   it("changes price when you add a crust.", function() {
     var testPizza = new Pizza(" ", " ",
-      "[' ', ' ']", 0.00);
+      "[' ', ' ']", 8.00);
     testPizza.addCrust("deep dish");
     expect(testPizza.pizzaCrust).to.equal("deep dish");
     expect(testPizza.pizzaPrice).to.equal(9.00);
