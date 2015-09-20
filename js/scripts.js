@@ -60,6 +60,30 @@ function Order(totalFood, totalPrice) {
   this.totalPrice = totalPrice;
 }
 
+Order.prototype.addItem = function(newItem) {
+  if (newItem == "2 liter of Coca-Cola") {
+    this.totalFood.push(newItem);
+    this.totalPrice += 1.50;
+  } else if (newItem == "2 liter of Sprite") {
+    this.totalFood.push(newItem);
+    this.totalPrice += 1.50;
+  } else if (newItem == "2 liter of Diet Coke") {
+    this.totalFood.push(newItem);
+    this.totalPrice += 1.50;
+  } else if (newItem == "cheesy bread") {
+    this.totalFood.push(newItem);
+    this.totalPrice += 3.50;
+  } else if (newItem == "garlic bread") {
+    this.totalFood.push(newItem);
+    this.totalPrice += 2.50;
+  } else {
+    var description = "a " + newItem.pizzaSize + " " + newItem.pizzaCrust +
+      " with " + newItem.pizzaToppings.length + " toppings";
+    this.totalFood.push(description);
+    this.totalPrice += newItem.pizzaPrice;
+  }
+}
+
 
 
 // jQuery functions :

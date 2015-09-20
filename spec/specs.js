@@ -97,11 +97,20 @@ describe("Pizza", function() {
 describe("Order", function() {
 
   it("creates an order with the specified properties.", function() {
-    var testOrder = new Order(['large deep dish with pepperoni',
+    var testOrder = new Order(['a large deep dish with pepperoni',
       "2 liter of Coca-Cola"], 11.50);
-    expect(testOrder.totalFood).to.eql(['large deep dish with pepperoni',
+    expect(testOrder.totalFood).to.eql(['a large deep dish with pepperoni',
       "2 liter of Coca-Cola"]);
     expect(testOrder.totalPrice).to.eql(11.50);
+  });
+
+  it("adds things to your order.", function() {
+    var testOrder = new Order(['a large deep dish with pepperoni',
+      "2 liter of Coca-Cola"], 11.50);
+    testOrder.addItem("cheesy bread")
+    expect(testOrder.totalFood).to.eql(['a large deep dish with pepperoni',
+      "2 liter of Coca-Cola", "cheesy bread"]);
+    expect(testOrder.totalPrice).to.eql(15.00);
   });
 
 });
