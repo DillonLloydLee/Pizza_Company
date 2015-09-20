@@ -1,4 +1,4 @@
-// Tests :
+// Tests for Pizza prototype:
 
 describe("Pizza", function() {
 
@@ -87,6 +87,21 @@ describe("Pizza", function() {
     testPizza.addSize("small");
     expect(testPizza.pizzaSize).to.eql("small");
     expect(testPizza.pizzaPrice).to.eql(8.00);
+  });
+
+});
+
+
+// Tests :
+
+describe("Order", function() {
+
+  it("creates an order with the specified properties.", function() {
+    var testOrder = new Order(['large deep dish with pepperoni',
+      "2 liter of Coca-Cola"], 11.50);
+    expect(testOrder.totalFood).to.eql(['large deep dish with pepperoni',
+      "2 liter of Coca-Cola"]);
+    expect(testOrder.totalPrice).to.eql(11.50);
   });
 
 });

@@ -1,4 +1,4 @@
-// Pizza prototype constructor :
+// Pizza prototype :
 
 function Pizza(pizzaSize, pizzaCrust, pizzaToppings, pizzaPrice) {
   this.pizzaSize = pizzaSize;
@@ -51,6 +51,15 @@ Pizza.prototype.removeTopping = function(oldTopping) {
   this.pizzaToppings.splice(index, 1);
   this.pizzaPrice -= 1.00;
 };
+
+
+// Order prototype :
+
+function Order(totalFood, totalPrice) {
+  this.totalFood = totalFood;
+  this.totalPrice = totalPrice;
+}
+
 
 
 // jQuery functions :
