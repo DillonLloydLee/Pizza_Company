@@ -19,6 +19,11 @@ Pizza.prototype.addSize = function(newSize) {
 };
 
 Pizza.prototype.addCrust = function(newCrust) {
+  if (this.pizzaCrust == "deep dish") {
+    this.pizzaPrice -= 1.00;
+  } else if (this.pizzaCrust == "stuffed") {
+    this.pizzaPrice -= 2.00;
+  }
   this.pizzaCrust = newCrust;
   if (this.pizzaCrust == "regular") {
     this.pizzaPrice += 0.00;

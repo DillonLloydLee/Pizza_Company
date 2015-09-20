@@ -67,10 +67,18 @@ describe("Pizza", function() {
 
   it("can remove a topping.", function() {
     var testPizza = new Pizza("large", "stuffed",
-      ["pepperoni", "bacon"], 12.00);
+      ["pepperoni", "bacon", "black olives"], 12.00);
     testPizza.removeTopping("bacon");
-    expect(testPizza.pizzaToppings).to.eql(["pepperoni"]);
+    expect(testPizza.pizzaToppings).to.eql(["pepperoni", "black olives"]);
     expect(testPizza.pizzaPrice).to.eql(11.00);
+  });
+
+  it("can change crusts.", function() {
+    var testPizza = new Pizza("large", "stuffed",
+      ["pepperoni"], 11.00);
+    testPizza.addCrust("original");
+    expect(testPizza.pizzaCrust).to.eql("original");
+    expect(testPizza.pizzaPrice).to.eql(9.00);
   });
 
 });
