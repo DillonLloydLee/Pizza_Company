@@ -34,6 +34,12 @@ Pizza.prototype.addTopping = function(newTopping) {
   this.pizzaPrice += 1.00;
 };
 
+Pizza.prototype.removeTopping = function(oldTopping) {
+  var index = this.pizzaToppings.indexOf(oldTopping);
+  this.pizzaToppings.splice(index, 1);
+  this.pizzaPrice -= 1.00;
+};
+
 
 // jQuery functions :
 

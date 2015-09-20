@@ -68,7 +68,7 @@ describe("Pizza", function() {
   it("can remove a topping.", function() {
     var testPizza = new Pizza("large", "stuffed",
       ["pepperoni", "bacon"], 12.00);
-    testPizza.removeTopping("pepperoni");
+    testPizza.removeTopping("bacon");
     expect(testPizza.pizzaToppings).to.eql(["pepperoni"]);
     expect(testPizza.pizzaPrice).to.eql(11.00);
   });
