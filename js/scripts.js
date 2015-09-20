@@ -149,6 +149,11 @@ $(document).ready(function() {
     $(".soda-page").toggle();
   });
 
+  $(".go-to-confirm-from-choose").click(function() {
+    $(".choose-page").toggle();
+    $(".confirm-page").toggle();
+  });
+
   $(".go-to-confirm-from-pizzas").click(function() {
     $(".pizza-page").toggle();
     $(".confirm-page").toggle();
@@ -162,6 +167,11 @@ $(document).ready(function() {
   $(".go-to-confirm-from-sodas").click(function() {
     $(".soda-page").toggle();
     $(".confirm-page").toggle();
+  });
+
+  $(".go-to-choose-from-sodas").click(function() {
+    $(".soda-page").toggle();
+    $(".choose-page").toggle();
   });
 
   $(".go-to-final").click(function() {

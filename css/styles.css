@@ -9,7 +9,7 @@ h2 {
   text-decoration: underline;
 }
 
-h2.final-thanks {
+h2.no-under {
   text-decoration: none;
 }
 
@@ -40,9 +40,11 @@ hr {
 .clickable:hover {
   color: #663300;
   text-shadow: 2px 2px 5px #3333FF;
+  font-weight: 900;
 }
 
 .clickable:active {
   color: red;
   text-shadow: 2px 2px 5px blue;
+  font-weight: 900;
 }
