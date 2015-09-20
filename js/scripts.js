@@ -29,6 +29,11 @@ Pizza.prototype.addCrust = function(newCrust) {
   }
 };
 
+Pizza.prototype.addTopping = function(newTopping) {
+  this.pizzaToppings.push(newTopping);
+  this.pizzaPrice += 1.00;
+};
+
 
 // jQuery functions :
 
