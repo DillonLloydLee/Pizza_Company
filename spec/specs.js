@@ -26,4 +26,19 @@ describe("Pizza", function() {
     expect(testPizza.pizzaPrice).to.equal(8.00);
   });
 
+  it("adds a crust to the pizza.", function() {
+    var testPizza = new Pizza("large", " ",
+      "[' ', ' ']", 8.00);
+    testPizza.addCrust("original");
+    expect(testPizza.pizzaCrust).to.equal("original");
+  });
+
+  it("changes price when you add a crust.", function() {
+    var testPizza = new Pizza(" ", " ",
+      "[' ', ' ']", 0.00);
+    testPizza.addCrust("deep dish");
+    expect(testPizza.pizzaCrust).to.equal("deep dish");
+    expect(testPizza.pizzaPrice).to.equal(9.00);
+  });
+
 });
