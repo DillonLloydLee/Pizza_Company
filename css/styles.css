@@ -54,9 +54,16 @@ hr {
   top: 30%;
   left: 30%;
   width: 40%;
-  border-style: double;
+  border-style: solid;
   border-color: black;
+  border-width: 8px;
   padding: 10px;
   background-color: white;
   display: none;
+}
+
+.my-pizza {
+  border-style: double;
+  border-color: black;
+  padding: 10px;
 }

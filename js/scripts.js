@@ -111,7 +111,7 @@ Order.prototype.startOver = function() {
 // Starting an initial order :
 
 var order = new Order([], 0.00);
-var thisPizza = new Pizza(" ", " ", [], 0.00);
+var pizza = new Pizza(" ", " ", [], 0.00);
 
 
 // Add info to confirm page :
@@ -189,9 +189,10 @@ $(document).ready(function() {
   });
 
   $(".go-to-confirm-from-pizzas").click(function() {
-    if (thisPizza.pizzaSize == " " || thisPizza.pizzaCrust == " ") {
+    if (pizza.pizzaSize == " " || pizza.pizzaCrust == " ") {
       $(".pizza-incomplete").toggle();
     } else {
+      order.addItem(pizza);
       $(".pizza-page").toggle();
       fillConfirmPage();
       $(".confirm-page").removeClass('animated fadeInUp');
@@ -301,5 +302,13 @@ $(document).ready(function() {
     $(".choose-page").addClass('animated fadeInUp');
     $(".choose-page").toggle();
   });
+
+
+// Pizza Selectors :
+
+$(".start-over").click(function() {
+  pizza.pizzaSize = "large";
+  $(".food").append(foodItem + "<br>");
+});
 
 });
