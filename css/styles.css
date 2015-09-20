@@ -18,8 +18,13 @@ p {
   font-size: 30px;
 }
 
-.order-page-choose, .order-page-pizza, .order-page-sides,
-.order-page-beverages, .final-page, .confirm-page, .about-page {
+hr {
+  background-color: black;
+  height: 4px;
+}
+
+.choose-page, .pizza-page, .side-page, .soda-page, .final-page,
+.confirm-page, .about-page {
   display: none;
 }
 
@@ -28,5 +33,11 @@ p {
 }
 
 .clickable:hover {
-  background-color: rgba(255, 255, 192, .5);
+  color: #663300;
+  text-shadow: 2px 2px 5px #3333FF;
+}
+
+.clickable:active {
+  color: red;
+  text-shadow: 2px 2px 5px blue;
 }
