@@ -220,6 +220,11 @@ $(document).ready(function() {
     $(".choose-page").toggle();
   });
 
+  $(".go-to-choose-from-sides").click(function() {
+    $(".side-page").toggle();
+    $(".choose-page").toggle();
+  });
+
   $(".go-to-final").click(function() {
     $(".confirm-page").toggle();
     $(".final-page").toggle();
@@ -238,6 +243,12 @@ $(document).ready(function() {
   $(".go-back-to-sodas").click(function() {
     $(".confirm-page").toggle();
     $(".soda-page").toggle();
+  });
+
+  $(".start-over").click(function() {
+    order.startOver();
+    $(".confirm-page").toggle();
+    $(".choose-page").toggle();
   });
 
 });
